@@ -7,31 +7,23 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name="bike_entity")
 public class BikeEntity {
     @Id
-    @Column(name = "immatriculation")
     private String immatriculation;
 
     //Before
-    @Column(name = "capacity")
     private Integer capacity;
     //After
 
-    @Column(name = "cylinder_number")
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.ORDINAL)
     private CylinderNumber cylinderNumber;
 
-    @Column(name = "automatic")
     private Boolean automatic;
 
-    @Column(name ="shifter")
     private Boolean shifter;
 
-    @Column(name = "shifter_type")
-    @Enumerated(EnumType.ORDINAL)
+    @Enumerated(EnumType.STRING)
     private ShifterType shifterType;
 
-    @Column(name ="circulation_date")
     private LocalDate circulationDate;
 }
