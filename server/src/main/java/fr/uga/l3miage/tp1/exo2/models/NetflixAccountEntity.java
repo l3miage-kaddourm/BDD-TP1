@@ -1,5 +1,7 @@
 package fr.uga.l3miage.tp1.exo2.models;
 
+import fr.uga.l3miage.tp1.exo2.enums.TypeAccount;
+
 import javax.persistence.*;
 import java.math.BigInteger;
 
@@ -14,7 +16,8 @@ public class NetflixAccountEntity {
     private Integer nbDevices;
 
     @Column(name = "typeAccount")
-    private String typeAccount;
+    @Enumerated(EnumType.STRING)
+    private TypeAccount typeAccount;
 
     @Column(name = "uuid_user")
     @OneToOne(mappedBy = "netflixAccount")
