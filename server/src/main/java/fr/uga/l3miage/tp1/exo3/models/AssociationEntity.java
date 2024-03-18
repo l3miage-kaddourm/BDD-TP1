@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import javax.persistence.*;
 import java.util.Set;
-
+@Entity
 public class AssociationEntity {
     @Id
     private String name;
