@@ -10,7 +10,7 @@ public class BrandEntity {
     @Column(name="company_name")
     private String companyName;
 
-    @Column(name="siretNumber", length = 11)
+    @Column(name="siret_number", length = 11)
     private String siretNumber;
 
     @Column(name = "type")
