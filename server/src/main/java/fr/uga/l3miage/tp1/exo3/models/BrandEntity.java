@@ -5,6 +5,7 @@ import fr.uga.l3miage.tp1.exo3.enums.BrandType;
 import javax.persistence.*;
 import java.util.Set;
 
+@Table(name = "brand_miage")
 public class BrandEntity {
     @Id
     @Column(name="company_name")

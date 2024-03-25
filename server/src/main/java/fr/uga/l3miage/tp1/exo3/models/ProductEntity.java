@@ -2,13 +2,11 @@ package fr.uga.l3miage.tp1.exo3.models;
 
 import lombok.Cleanup;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Table(name = "product_entity")
 public class ProductEntity {
     @Id
     @Column(name="bar_code_number", length = 15)
