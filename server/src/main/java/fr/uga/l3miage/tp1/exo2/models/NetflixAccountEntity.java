@@ -20,6 +20,7 @@ public class NetflixAccountEntity {
     private TypeAccount typeAccount;
 
     @Column(name = "uuid_user")
-    @OneToOne(mappedBy = "netflixAccount")
+    @OneToOne
+    @JoinColumn(name= "uuid_user", referencedColumnName= "uuid")
     private NetflixUserEntity netflixUser;
 }
